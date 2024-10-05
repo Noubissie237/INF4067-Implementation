@@ -1,5 +1,12 @@
 # INF 4067 - UML & DESIGN PATTERN
 
+*** 
+### INFORMATIONS DE L'ETUDIANT
+NOM : NOUBISSIE KAMGA WILFRIED <br>
+MATRICULE : 20U2671 <br>
+NIVEAU : MASTER I
+***
+
 Ce dépôt est destiné à accueillir les exercices, td et tp qui seront donnés pour le compte de l'UE INF4067 de l'année académique 2024 / 2025
 
 ## Remarque
