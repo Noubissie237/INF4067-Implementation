@@ -1,6 +1,6 @@
 package packages;
 
-public class ProduitA3 implements ProduitA
+public class ProduitA3 extends ProduitA
 {
     public void methodeA()
     {

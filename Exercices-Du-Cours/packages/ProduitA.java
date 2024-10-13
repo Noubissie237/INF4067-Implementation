@@ -1,5 +1,5 @@
 package packages;
 
-public interface ProduitA {
-    public void methodeA();
+public abstract class ProduitA {
+    public abstract void methodeA();
 }
