@@ -4,16 +4,10 @@ public class Prog
 {
     public static void main(String args[])
     {
-        Singleton singleton = Singleton.getInstance();
+        int som = Singleton.getInstance().somme(2, 5);
+        System.out.println("La somme est : "+som);
 
-        System.out.println("-----------------------");
-        singleton.operation1(2, 3, 4);   
-
-        System.out.println("-----------------------");
-        singleton.operation2(2, 3, 4);   
-
-        System.out.println("-----------------------");
-        singleton.operation3(2, 3, 4);   
-
+        Singleton s1 = Singleton.getInstance(8, 3);
+        s1.affiche();
     }
 }

@@ -2,11 +2,17 @@ package packages;
 
 public final class Singleton {
     private static Singleton instance = null;
-    private String attrib1;
-    private int attrib2;
+    private int x;
+    private int y;
 
     private Singleton(){
         super();
+    }
+
+    private Singleton(int x, int y)
+    {
+        this.x = x;
+        this.y = y;
     }
 
     public static Singleton getInstance()
@@ -16,25 +22,31 @@ public final class Singleton {
         return instance;
     }
 
-    public void operation1(int x, int y, int z)
+    public static Singleton getInstance(int x, int y)
     {
-        this.attrib2 = x+y+z;
-        this.attrib1 = "OPERATION 1 (ADDITION) : "+x+" + "+y+" + "+z+" = "+this.attrib2;
-        System.out.println(this.attrib1);
+        if (instance == null)
+            return new Singleton(x, y);
+        return instance;  
     }
 
-    public void operation2(int x, int y, int z)
+    public int somme(int x, int y)
     {
-        this.attrib2 = x-y-z;
-        this.attrib1 = "OPERATION 2 (SOUSTRACTION) : "+x+" - "+y+" - "+z+" = "+this.attrib2;
-        System.out.println(this.attrib1);
+        return x+y;
     }
 
-    public void operation3(int x, int y, int z)
+    public float moyenne(int x, int y)
     {
-        this.attrib2 = x*y*z;
-        this.attrib1 = "OPERATION 3 (MULTIPLICATION) : "+x+" x "+y+" x "+z+" = "+this.attrib2;
-        System.out.println(this.attrib1);
+        return somme(x, y)/2;
+    }
+
+    public void affiche()
+    {
+        System.out.println("\nJe suis une instance, mes valeurs sont : x = "+this.x+" et y = "+this.y);
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException{
+        throw new CloneNotSupportedException();
     }
 
 }
