@@ -4,20 +4,16 @@ public class Prog
 {
     public static void main(String args[])
     {
-        ProduitA produitA = null;
-        FactoryProduit factoryProduit = new FactoryProduit();
+        Singleton singleton = Singleton.getInstance();
 
-        produitA = factoryProduit.geProduitA(FactoryProduit.TYPE_PRODUITA1);
-        produitA.methodeA();
-        
-        
-        produitA = factoryProduit.geProduitA(FactoryProduit.TYPE_PRODUITA2);
-        produitA.methodeA();
-        
-        
-        produitA = factoryProduit.geProduitA(FactoryProduit.TYPE_PRODUITA3);
-        produitA.methodeA();
-        
-        
+        System.out.println("-----------------------");
+        singleton.operation1(2, 3, 4);   
+
+        System.out.println("-----------------------");
+        singleton.operation2(2, 3, 4);   
+
+        System.out.println("-----------------------");
+        singleton.operation3(2, 3, 4);   
+
     }
 }
